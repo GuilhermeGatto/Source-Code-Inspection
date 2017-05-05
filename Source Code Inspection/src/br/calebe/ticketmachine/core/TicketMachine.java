@@ -22,7 +22,15 @@ public class TicketMachine {
     public void inserir(int quantia) throws PapelMoedaInvalidaException {
         boolean achou = false;
         for (int i = 0; i < papelMoeda.length && !achou; i++) {
-            if (papelMoeda[1] == quantia) {
+            /* alteração do valor 1 anteriormente colocado no indice do array pelo valor i,
+            permitindo assim que todas as posições do array seja percorrida
+            
+            codigo antigo: papelMoeda[1] == quantia
+            codigo atual: papelMoeda[i] == quantia
+            
+            
+            */
+            if (papelMoeda[i] == quantia) {
                 achou = true;
             }
         }
