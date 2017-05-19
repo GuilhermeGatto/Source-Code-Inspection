@@ -80,7 +80,14 @@ class Troco {
 
         @Override
         public void remove() {
-            next();
-        }
+            if(hasNext()){
+                for(int i = 6; i >= 0; i--){
+                    if(troco.papeisMoeda[i] == next()){
+                        troco.papeisMoeda[i] = null;                                                                
+                    }   
+                }
+            }
+    
+        }   
     }
 }
